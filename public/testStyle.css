@@ -83,5 +83,7 @@ input:focus {
 }
 
 @media(max-width:800px) {
-    
+    .list-wrapper {
+        display: none;
+    }
 }
