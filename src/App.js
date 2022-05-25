@@ -8,10 +8,11 @@ function App() {
         <div className="container">
             <div className="search-wrapper">
                 <form className="form">
-                    <div className="">
+
                         <input type="search" className="search frame"/>
-                    </div>
+
                     <input type="submit" value="GO" className="search-button frame"/>
+
                 </form>
                 <form className="form">
                     <input type="search" className="search frame"/>
@@ -104,17 +105,29 @@ function App() {
 
                 <div className={'navigation-wrapper'}>
                     <SearchForm/>
-                    <select name={'filter frame button-search'} className={'filter'}>
+                    <select className={'filter frame search-button'} >
                         <option selected>Без фильтров</option>
                         <option value={'10'}>Номер >10</option>
                         <option value={'100'}>Номер >100</option>
                         <option value={'200'}>Номер >200</option>
                     </select>
+
+
+
+                    <Select
+                        value={selectedSort}
+                        onChange={sortCards}
+                        defaultValue={'Sorting'}
+                        options={[
+                            {value: 'name', name: 'in name'},
+                            {value: 'year', name: 'in year'}
+
+                        ]}/>
+
                 </div>
-                if(!searchQuery) {
-                <Elements/>}
-                <searchElements/>
-                <>
+
+                <Elements/>
+
                     <h4>Выбранные элементы на данный момент:</h4>
                     <>
                         <div className={'choice frame'}></div>
@@ -125,7 +138,7 @@ function App() {
                         <button className={'search-button frame'}>Сохранить</button>
                         <button className={'search-button frame'}>Отмена</button>
                     </div>
-                </>
+
             </div>
         </div>
     )
