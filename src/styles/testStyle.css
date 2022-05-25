@@ -20,6 +20,46 @@
     padding: 20px;
     background-image: url(../assets/texture/bg.jpg);
 }
+.hamburger-wrapper {
+    display: flex;
+        }
+
+.hamburger-line, .hamburger::after, .hamburger::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 2.4px;
+    background: var(--light-text);
+    border-radius: 5px;
+}
+
+.hamburger {
+    transition: 0.4s;
+    position: relative;
+    width: 25px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.hamburger::before {
+    top: 0;
+    left: 0;
+}
+.hamburger::after {
+    bottom: 0;
+    left: 0;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger-line {
+    top: calc(50% - 1.5px);
+    left: 0;
+}
+
 
 .form {
     display: flex;
@@ -136,6 +176,7 @@ input:focus {
     overflow: auto;
     background-color: var(--main-color-transparency);
 }
+
 @media (max-width: 800px) {
     .list-wrapper {
         display: none;

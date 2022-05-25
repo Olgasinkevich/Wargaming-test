@@ -1,17 +1,21 @@
 import React, {useState} from 'react';
+import Elements from "./Elements";
 
 const SearchForm = () => {
     const [searchQuery, setSearchQuery] = useState('');
     return (
         <form className="form">
-            <input type="search" className="search frame" value={searchQuery} placeholder='Search' autoComplete="off" />
-            <button className="search-button frame">НАЙТИ</button>
+            <input type="search" className="search frame" value={searchQuery}
+                   onChange={event => setSearchQuery(event.target.value)} placeholder='Search' autoComplete="off"/>
         </form>
 
     );
 };
 
 export default SearchForm;
+
+
+
 
 /*
 const sortAndSearchCards = useMemo(()=>{
