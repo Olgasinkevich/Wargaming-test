@@ -8,7 +8,7 @@ function App() {
         <div className="container">
             <div className="search-wrapper">
                 <form className="form">
-                    <div>
+                    <div className="">
                         <input type="search" className="search frame"/>
                     </div>
                     <input type="submit" value="GO" className="search-button frame"/>
@@ -26,25 +26,19 @@ function App() {
                 <span className="hamburger">
                      <span className="hamburger-line"></span>
                 </span>
-                <div className="wrapper">
-                    <div className="menu-box">
 
-                        <form className="hamburger-list">
-                            <select className={"list-items frame"}>
+                    <div className="hamburger-list frame">
 
-                                <option className="list-items">
-                                    <input type="radio" name="World" value="Tanks" selected/>World Of Tanks
-                                </option>
-                                <option className="list-items">
-                                    <input type="radio" name="World" value="Warplanes"/>World Of Warplanes
-                                </option>
-                                <option className="list-items">
-                                    <input type="radio" name="World" value="Warships"/>World Of Warships
-                                </option>
-                            </select>
-                        </form>
+                        <div className="list-items input visible" name="World" value="Tanks">World Of Tanks</div>
+
+                        <div className="list-items input hidden" name="World" value="Warplanes">World Of Warplanes
+                        </div>
+                        <div className="list-items input hidden" name="World" value="Warships">World Of Warships</div>
+
+                        <input type="hidden"/>
                     </div>
-                </div>
+
+
             </div>
 
             <ul className="list-wrapper">
@@ -53,9 +47,10 @@ function App() {
                 <li className="list-items">World Of Warships</li>
             </ul>
             <hr className="hr-style"/>
+            <h3 className="title-three">Почему не рассматриваются заявки с жалобами на нарушение Правил
+                игры?</h3>
             <div className="text-wrapper">
-                <h3 className="title-three">Почему не рассматриваются заявки с жалобами на нарушение Правил
-                    игры?</h3>
+
                 <p>После введения функционала "Пожаловаться" не рассматриваются заявки, созданные в центре подднржки
                     пользователей о нарущении Правил игры по следующим пунктам:
                 </p>

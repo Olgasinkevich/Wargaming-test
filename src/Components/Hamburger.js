@@ -13,7 +13,7 @@ const Hamburger = () => {
         menu.style.opacity = isOpen ? "1" : "0";
     });
 
-
+onclick()
 
 
     return (

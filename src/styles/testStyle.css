@@ -55,6 +55,10 @@ input:focus {
     border: 1px solid var(--light);
 }
 
+.input:active{
+    background-image: url("../assets/images/arrow.png");
+}
+
 .search-button {
     display: inline-block;
     min-width: auto;
@@ -75,9 +79,8 @@ input:focus {
 }
 
 .hamburger-wrapper {
-    display: flex;
-    width: 25vw;
-}
+    display: none;
+ }
 
 .hamburger-line, .hamburger::after, .hamburger::before {
     content: "";
@@ -124,6 +127,14 @@ margin-left: 5px;
     flex-direction: column;
 }
 
+.visible {
+    display: block;
+}
+
+.hidden {
+   display: none;
+}
+
 .list-wrapper {
     display: flex;
     justify-content: space-around;
@@ -139,6 +150,13 @@ margin-left: 5px;
       background-image: url("../assets/images/search.png");
     background-color: var(--main-color-transparency);
     outline: none;
+
+}
+
+.text-wrapper {
+    columns: 2;
+    column-rule: 1px solid var(--light-text);
+    column-gap: 40px;
 
 }
 
