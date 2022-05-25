@@ -21,25 +21,27 @@ function App() {
             </div>
             <hr className="hr-style"/>
 
-            <div className="hamburger-wrapper frame">
-                <span className="hamburger">
-                    <span className="hamburger-line"></span>
-                </span>
+            <div className="hamburger-wrapper">
 
+                <span className="hamburger">
+                     <span className="hamburger-line"></span>
+                </span>
                 <div className="wrapper">
                     <div className="menu-box">
+
                         <form className="hamburger-list">
-<select>
-                            <option className="list-items">
-                                <input type="radio" name="World" value="Tanks" selected/>World Of Tanks
-                            </option>
-                            <option className="list-items">
-                                <input type="radio" name="World" value="Warplanes"/>World Of Warplanes
-                            </option>
-                            <option className="list-items">
-                                <input type="radio" name="World" value="Warships"/>World Of Warships
-                            </option>
-</select>
+                            <select className={"list-items frame"}>
+
+                                <option className="list-items">
+                                    <input type="radio" name="World" value="Tanks" selected/>World Of Tanks
+                                </option>
+                                <option className="list-items">
+                                    <input type="radio" name="World" value="Warplanes"/>World Of Warplanes
+                                </option>
+                                <option className="list-items">
+                                    <input type="radio" name="World" value="Warships"/>World Of Warships
+                                </option>
+                            </select>
                         </form>
                     </div>
                 </div>
