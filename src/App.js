@@ -2,6 +2,7 @@ import React from "react";
 import Elements from "./Components/Elements";
 import './styles/testStyle.css';
 import SearchForm from "./Components/SearchForm";
+import Burger from "./Components/Burger";
 
 function App() {
     return (
@@ -21,28 +22,8 @@ function App() {
 
             </div>
             <hr className="hr-style"/>
-
-            <div className="hamburger-wrapper">
-
-                <span className="hamburger">
-                     <span className="hamburger-line"></span>
-                </span>
-
-                    <div className="hamburger-list frame">
-
-                        <div className="list-items input visible" name="World" value="Tanks">World Of Tanks</div>
-
-                        <div className="list-items input hidden" name="World" value="Warplanes">World Of Warplanes
-                        </div>
-                        <div className="list-items input hidden" name="World" value="Warships">World Of Warships</div>
-
-                        <input type="hidden"/>
-                    </div>
-
-
-            </div>
-
-            <ul className="list-wrapper">
+<Burger/>
+                      <ul className="list-wrapper">
                 <li className="list-items">World Of Tanks</li>
                 <li className="list-items">World Of Warplanes</li>
                 <li className="list-items">World Of Warships</li>
@@ -97,9 +78,9 @@ function App() {
                 <h3 className={'title-three'}>Выбор элементов</h3>
                 <h4>На данный момент выбрано:</h4>
                 <>
-                    <div className={'choice frame'}></div>
-                    <div className={'choice frame'}></div>
-                    <div className={'choice frame'}></div>
+                    <div className='choice frame'></div>
+                    <div className='choice frame'></div>
+                    <div className='choice frame'></div>
                 </>
                 <button className={'search-button frame'}>Изменить выбор</button>
 
@@ -112,27 +93,15 @@ function App() {
                         <option value={'200'}>Номер >200</option>
                     </select>
 
-
-
-                    <Select
-                        value={selectedSort}
-                        onChange={sortCards}
-                        defaultValue={'Sorting'}
-                        options={[
-                            {value: 'name', name: 'in name'},
-                            {value: 'year', name: 'in year'}
-
-                        ]}/>
-
                 </div>
 
                 <Elements/>
 
                     <h4>Выбранные элементы на данный момент:</h4>
                     <>
-                        <div className={'choice frame'}></div>
-                        <div className={'choice frame'}></div>
-                        <div className={'choice frame'}></div>
+                        <div className='choice frame'></div>
+                        <div className='choice frame'></div>
+                        <div className='choice frame'></div>
                     </>
                     <div className={'navigation-wrapper'}>
                         <button className={'search-button frame'}>Сохранить</button>

@@ -61,8 +61,21 @@ input:focus {
     border: 1px solid var(--light);
 }
 
-.input:active{
+.list-items .input {
+    display: flex;
+    }
+.input {
+    border: none;
+    background-color: transparent;
+}
+
+.input:hover {
+    background-size: 25px;
+    background-position:3px center;
     background-image: url("../assets/images/arrow.png");
+   background-repeat: no-repeat;
+    cursor: pointer;
+
 }
 
 .search-button {
@@ -101,11 +114,16 @@ input:focus {
 .hamburger {
    /* transition: 0.4s;*/
     position: absolute;
-    margin-top: 5px;
-margin-left: 5px;
+   margin: 5px;
        width: 20px;
     height: 15px;
+    border:none;
+    background-color: transparent;
     /*margin-right: 20px;*/
+}
+
+ .closed {
+    display: none;
 }
 
 .hamburger::before {
@@ -131,14 +149,12 @@ margin-left: 5px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-.visible {
-    display: block;
-}
-
-.hidden {
-   display: none;
+    padding-left: 30px;
+    outline: none;
+    appearance: none;
+    font-size: 1.17rem;
+    color: var(--light-text);
+    background-color: var(--main-color-transparency);
 }
 
 .list-wrapper {
@@ -148,14 +164,13 @@ margin-left: 5px;
 }
 
 .list-items {
-    padding: 0px 5px 0px 30px;
+        padding: 0px 5px 0px 30px;
     list-style-type: none;
     color: var(--light-text);
     font-size: 1.17rem;
     appearance: none;
       background-image: url("../assets/images/search.png");
-    background-color: var(--main-color-transparency);
-    outline: none;
+        outline: none;
 
 }
 
