@@ -69,15 +69,6 @@ input:focus {
     background-color: transparent;
 }
 
-.input:hover {
-    background-size: 25px;
-    background-position:3px center;
-    background-image: url("../assets/images/arrow.png");
-   background-repeat: no-repeat;
-    cursor: pointer;
-
-}
-
 .search-button {
     display: inline-block;
     min-width: auto;
@@ -122,9 +113,16 @@ input:focus {
     /*margin-right: 20px;*/
 }
 
- .closed {
+ .hamburger.closed,.input.closed {
     display: none;
 }
+ .hamburger.closed~div>button:hover {
+     background-size: 25px;
+     background-position:3px center;
+     background-image: url("../assets/images/arrow.png");
+     background-repeat: no-repeat;
+     cursor: pointer;
+ }
 
 .hamburger::before {
     top: 0;
