@@ -11,7 +11,7 @@ function App() {
             <div className="search-wrapper">
                 <form className="form">
 
-                        <input type="search" className="search frame"/>
+                    <input type="search" className="search frame"/>
 
                     <input type="submit" value="GO" className="search-button frame"/>
 
@@ -23,8 +23,8 @@ function App() {
 
             </div>
             <hr className="hr-style"/>
-<Burger/>
-                      <ul className="list-wrapper">
+            <Burger/>
+            <ul className="list-wrapper">
                 <li className="list-items">World Of Tanks</li>
                 <li className="list-items">World Of Warplanes</li>
                 <li className="list-items">World Of Warships</li>

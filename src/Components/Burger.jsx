@@ -18,17 +18,20 @@ const Burger = () => {
                 <span className="hamburger-line"></span>
             </button>
 
-            <div className="hamburger-list frame">
-
-                <input onClick={openMenu} className="list-items input" name="World" value="Tanks" selected>World Of
-                    Tanks</input>
-
-                <input onClick={openMenu} className={optionStyle} name="World"
-                       value="Warplanes">World Of Warplanes
-                </input>
-                <input onClick={openMenu} className={optionStyle} name="World"
-                       value="Warships">World Of Warships</input>
-
+            <div className="hamburger-list frame" defaultValue={'Tanks'}>
+                <label className={optionStyle}>
+                    <input type="radio" onClick={openMenu} className="list-items input" name="World"
+                           value="Tanks" readOnly={true}/>World Of
+                    Tanks
+                </label>
+                <label className={optionStyle}>
+                    <input type="radio" className={optionStyle} onClick={openMenu}  name="World"
+                           defaultValue="Warplanes"/>World Of Warplanes
+                </label>
+                <label className={optionStyle}>
+                    <input type="radio" onClick={openMenu} className={optionStyle} name="World"
+                           defaultValue="Warships"/>World Of Warships
+                </label>
             </div>
 
 
