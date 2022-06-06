@@ -21,6 +21,14 @@ function App() {
                     <button className="search-button frame">НАЙТИ</button>
                 </form>
 
+                <form action="http://google.com/search" target="_blank" className="form">
+                    <input type="search" name="search" className="search frame"/>
+                        <input type="hidden" name="as_sitesearch"
+                               value="https://Olgasinkevich.github.io/wargaming-test/"/>
+                    <button className="search-button frame">Search</button>
+                </form>
+
+
             </div>
             <hr className="hr-style"/>
             <Burger/>
@@ -77,7 +85,7 @@ function App() {
             <hr className="hr-style"/>
             <ElementsSelection/>
         </div>
-    )
+)
 }
 
 export default App;
