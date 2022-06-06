@@ -1,63 +1,56 @@
 import React, {useCallback, useState, useMemo} from 'react';
 
-
-const BURGER_POINTS = {
-    tanks: 'World of Tanks',
-    warplanes: 'World of Warplanes',
-    warships: 'World of Warships',
-};
-
 const Burger = () => {
 
-    const [selectedValue, setSelectedValue] = useState(false);
+    const [selectedValue, setSelectedValue] = useState('World of Tanks');
 
     const [isOpen, setIsOpen] = useState(false);
 
-    const select = useCallback(() => {
-        setSelectedValue(!selectedValue);
-       /* value = valueInput;
-        selectedValue ? value = {valueInput} : value = {BURGER_POINTS['tanks']};*/
-    }, [selectedValue, setSelectedValue]);
-
-
-    const openMenu = useCallback(() => {
+    const onChange = useCallback((event)=> {
+                setSelectedValue(event.target.value)
+    }, [])
+        const openMenu = useCallback(() => {
 
             setIsOpen(!isOpen)
-        }, [isOpen, setIsOpen]
-    );
+        }, [isOpen, setIsOpen]);
 
-    const optionStyle = useMemo(() => {
-        return isOpen ? "list-items input" : "list-items input closed";
+        const optionStyle = useMemo(() => {
+            return isOpen ? "list-items input" : "list-items input closed";
 
-    }, [isOpen]);
+        }, [isOpen]);
 
-    return (
-        <div className="hamburger-wrapper">
+        return (
+            <div className="hamburger-wrapper">
 
-            <button onClick={openMenu} className={!isOpen ? "hamburger" : "hamburger closed"}>
-                <span className="hamburger-line"></span>
-            </button>
+                <button onClick={openMenu} className={!isOpen ? "hamburger" : "hamburger closed"}>
+                    <span className="hamburger-line"></span>
+                </button>
 
-            <div className="hamburger-list frame" defaultValue={'Tanks'}>
-                <input className={isOpen ? "list-items input closed" : "list-items"} type="button" value='World of Tanks'></input>
-                <label className={optionStyle}>
-                    <input onChange={select} type="button" onClick={openMenu} className="list-items input"
-                           name="World"
-                           value='World of Tanks'/>
-                </label>
-                <label className={optionStyle}>
-                    <input  onChange={() => select()} type="button" className={optionStyle} onClick={openMenu} name="World"
-                           value='World of Warplanes'/>
-                </label>
-                <label className={optionStyle}>
-                    <input onChange={() => select()} type="button" onClick={openMenu} className={optionStyle} name="World"
-                           value='World of Warships'/>
-                </label>
+                <div className="hamburger-list frame" defaultValue={'Tanks'}>
+                    <input className={isOpen ? "list-items input closed" : "list-items"} type="button"
+                           value={selectedValue}></input>
+                    <label className={optionStyle}>
+                        <input onChange={onChange} type="radio" onClick={openMenu}
+                               className="list-items input"
+                               name="World"
+                               value='World of Tanks'/>World of Tanks
+                    </label>
+                    <label className={optionStyle}>
+                        <input onChange={onChange} type="radio" className={optionStyle} onClick={openMenu}
+                               name="World"
+                               value='World of Warplanes'/>World of Warplanes
+                    </label>
+                    <label className={optionStyle}>
+                        <input onChange={onChange} type="radio" onClick={openMenu} className={optionStyle}
+                               name="World"
+                               value='World of Warships'/>World of Warships
+                    </label>
+                </div>
+
+
             </div>
+        );
+    }
 
-
-        </div>
-    );
-};
 
 export default Burger;
