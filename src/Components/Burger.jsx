@@ -27,7 +27,7 @@ const Burger = () => {
                 </button>
 
                 <div className="hamburger-list frame" defaultValue={'Tanks'}>
-                    <input className={isOpen ? "list-items input closed" : "list-items"} type="button"
+                    <input className={isOpen ? "list-items input closed" : "list-items border-none"} type="button"
                            value={selectedValue}></input>
                     <label className={optionStyle}>
                         <input onChange={onChange} type="radio" onClick={openMenu}

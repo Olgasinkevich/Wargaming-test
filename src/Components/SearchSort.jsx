@@ -1,4 +1,5 @@
 import React from 'react';
+/*
 
 import SearchForm from "./SearchForm";
 import Elements from "./Elements";
@@ -14,3 +15,5 @@ const SearchSort =({searchQuery, elemList})=> {
 
 
 export default SearchSort;
+
+ */

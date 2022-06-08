@@ -77,6 +77,11 @@ input:focus {
     background-color: transparent;
 }
 
+.border-none {
+    border: none;
+    background-color: transparent;
+}
+
 .search-button {
     display: inline-block;
     min-width: auto;
@@ -124,9 +129,7 @@ input:focus {
  .hamburger.closed,.input.closed, .hidden.closed {
     display: none;
 }
- .hidden {
 
- }
  .input.visible {
      display: flex;
  }
@@ -156,7 +159,6 @@ input:focus {
     top: calc(50% - 1.5px);
     left: 0;
 }
-
 
 .hamburger-list {
     display: flex;
