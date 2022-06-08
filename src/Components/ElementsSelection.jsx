@@ -52,7 +52,7 @@ const ElementsSelection = () => {
             </div>
 
 
-            <Elements selected={selected} minNumber={minNumber}/>
+            <Elements selected={selected} minNumber={minNumber} searchQuery={searchQuery}/>
 
 
             <h4>Выбранные элементы на данный момент:</h4>
