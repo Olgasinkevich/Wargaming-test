@@ -1,8 +1,9 @@
 import React, {useCallback} from 'react';
-import Elements from "./Elements";
+import Modal from "./Modal/Modal";
 
 
 const SearchForm = ({searchQuery, setSearchQuery}) => {
+    console.log("searchQuery");
     const onChange = useCallback(event => setSearchQuery(event.target.value), [setSearchQuery]);
 
     return (
