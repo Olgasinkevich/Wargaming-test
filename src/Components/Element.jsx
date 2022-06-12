@@ -6,7 +6,7 @@ const Element = (props) => {
 
     return (
         <label>
-            <input onChange={()=>props.onSelect(props.text)} type={'checkbox'}/>
+            <input onChange={()=>props.onSelect(props.text)} type={'checkbox'} disabled={props.disabled} />
             {props.text}
         </label>
     );

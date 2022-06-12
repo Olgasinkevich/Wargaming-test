@@ -1,12 +1,15 @@
 import React, {useCallback, useState} from 'react';
 import Modal from "./Modal/Modal";
+import Choice from "./Choice";
 
 
 
 
 const GroupModal = () => {
+
     console.log('!!!');
     const [isModal, setIsModal] = useState(false);
+    const [newArray, setNewArray] = useState([]);
 
     const modal = useCallback(() =>{
         console.log('modal))');
@@ -21,14 +24,9 @@ const GroupModal = () => {
     return (
         <>
             <h3 className={'title-three'}>Выбор элементов</h3>
-            <h4>На данный момент выбрано:</h4>
-            <>
-                <div className='choice frame'></div>
-                <div className='choice frame'></div>
-                <div className='choice frame'></div>
-            </>
+            <Choice/>
             <button onClick={modal} className={'search-button frame'}>Изменить выбор</button>
-            <Modal visible= {isModal} onPress={onModalPress}>
+            <Modal visible= {isModal} onPress={onModalPress} newArray={newArray} setNewArray={setNewArray}>
 
             </Modal>
 

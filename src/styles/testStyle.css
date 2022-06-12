@@ -15,6 +15,7 @@
     display: none;
 }
 
+
 .frame {
     min-width: auto;
     min-height: auto;
@@ -64,6 +65,10 @@
     background-repeat: no-repeat;
     background-position: 20px center;
     outline: none;
+}
+
+.search.modal-search {
+    width: 100%;
 }
 
 input:focus {
@@ -221,7 +226,7 @@ input:focus {
 .navigation-wrapper {
     display: flex;
     justify-content: space-around;
-    width: 75%;
+    width: 100%;
 
 }
 
