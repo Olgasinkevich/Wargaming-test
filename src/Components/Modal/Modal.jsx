@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useRef} from 'react';
+import React, {useState, useCallback} from 'react';
 import classes from './Modal.module.css';
 import SearchForm from "../SearchForm";
 import Sort from "../Sort";
@@ -11,16 +11,29 @@ const Modal = ({visible, onPress}) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [minNumber, setMinNumber] = useState(DEFAULT_MIN_NUMBER);
     const [newArray, setNewArray] = useState([]);
-    const selected = useCallback((text) => {
-        setNewArray([...newArray, text]);
-    }, [newArray]);
+
+    const onSelect = useCallback((text) => {
+        setNewArray(newArray.includes(text) ? newArray.filter(item => item !== text) : [...newArray, text]);
+
+        }, [newArray]);
 
     const rootClasses = [classes.modalWindow]
     if (visible) {
         rootClasses.push(classes.active)
     }
+
+
+    const save=useCallback(()=>{
+        onPress();
+    }, [onPress]);
+
+    const cansel=useCallback(()=>{
+        onPress();
+        setNewArray([]);
+    }, [onPress]);
+
     return (
-        <div className={rootClasses.join(' ')}>{console.log('@@@', newArray)}
+        <div className={rootClasses.join(' ')}>
             <div className={classes.modalContent} onClick={event => event.stopPropagation()}>
                 <div className={'navigation-wrapper'}>
 
@@ -31,11 +44,12 @@ const Modal = ({visible, onPress}) => {
                 </div>
 
 
-                <Elements selected={selected} minNumber={minNumber} searchQuery={searchQuery} disabled={!(newArray.length < 3)}/>
-                <Choice/>
+                <Elements onSelect={onSelect} minNumber={minNumber} searchQuery={searchQuery}
+                          disabled={!(newArray.length < 3)}/>
+                <Choice newArray={newArray}/>
                 <div className={'navigation-wrapper'}>
-                    <button onClick={onPress} className={'search-button frame'}>Сохранить</button>
-                    <button onClick={onPress} className={'search-button frame'}>Отмена</button>
+                    <button onClick={save} className={'search-button frame'}>Сохранить</button>
+                    <button onClick={cansel} className={'search-button frame'}>Отмена</button>
                 </div>
 
             </div>

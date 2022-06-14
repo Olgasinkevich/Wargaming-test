@@ -9,7 +9,7 @@ const ElementsSelection = () => {
 
     return (
         <div className={'elements-wrapper'}>
-            <GroupModal/>
+            <GroupModal />
 
 
         </div>
