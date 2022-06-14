@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/wargaming-test/static/css/main.f0ade49c.css",
+    "main.js": "/wargaming-test/static/js/main.b84b9acd.js",
+    "static/js/787.757f15c8.chunk.js": "/wargaming-test/static/js/787.757f15c8.chunk.js",
+    "static/media/bg.jpg": "/wargaming-test/static/media/bg.53174d950f1b34cba142.jpg",
+    "static/media/search.png": "/wargaming-test/static/media/search.a3077312817771d55b8a.png",
+    "index.html": "/wargaming-test/index.html",
+    "main.f0ade49c.css.map": "/wargaming-test/static/css/main.f0ade49c.css.map",
+    "main.b84b9acd.js.map": "/wargaming-test/static/js/main.b84b9acd.js.map",
+    "787.757f15c8.chunk.js.map": "/wargaming-test/static/js/787.757f15c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0ade49c.css",
+    "static/js/main.b84b9acd.js"
+  ]
+}
